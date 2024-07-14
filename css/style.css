@@ -70,7 +70,7 @@ i{
 }
 .content{
         width: 100%;
-        margin: auto;
+       
     
 }
 
@@ -78,5 +78,11 @@ i{
     .content{
         width: 80%;
         margin-left: auto;
+    }
+    .mealPhoto{
+        margin-top: 3rem;
+    }
+    .mealName{
+        margin-top: 2rem;
     }
 }

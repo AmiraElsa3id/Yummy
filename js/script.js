@@ -107,11 +107,11 @@ function displayMealDetails(data) {
     // });
     let box = `
     <div class="col-md-4">
-                <img class="w-100 rounded-3" src=${data.strMealThumb} alt="">
-                    <h2>${data.strMeal}</h2>
+                <img class="w-100 rounded-3 mealPhoto" src=${data.strMealThumb} alt="">
+                    <h2 class="my-3 mealName">${data.strMeal}</h2>
             </div>
             <div class="col-md-7">
-                <h2>Instructions</h2>
+                <h2 class="instruction">Instructions</h2>
                 <p>${data.strInstructions}</p>
                 <h3><span class="fw-bolder">Area : </span>${data.strArea}</h3>
                 <h3><span class="fw-bolder">Category : </span>${data.strCategory}</h3>
@@ -126,7 +126,7 @@ function displayMealDetails(data) {
                 <a target="_blank" href="${data.strSource}" class="btn btn-success">Source</a>
                 <a target="_blank" href="${data.strYoutube}" class="btn btn-danger">Youtube</a>
             </div>
-            <div class=" position-absolute top-0 end-0 ">
+            <div class=" position-absolute top-0 end-0 p-5">
             <i onclick="closeMealDetails()"class="fa-solid fa-x fa-2x text-light close-btn"></i></div>
     `;
     $('#rowData').addClass('d-none')
