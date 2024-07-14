@@ -11,11 +11,11 @@ async function searchMeal(mealName) {
     let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`);
     let data = await res.json();
     console.log(data);
-    rowData = data.meals.slice(0,20);
+    rowData = data.meals?data.meals.slice(0,20):data.meals;
+
     return rowData;
 }
 function displayMeal(arr) {
-    console.log(arr.length)
     $('#rowData').removeClass("d-none")
     if (arr != null) {
         let box = ``
@@ -126,8 +126,8 @@ function displayMealDetails(data) {
                 <a target="_blank" href="${data.strSource}" class="btn btn-success">Source</a>
                 <a target="_blank" href="${data.strYoutube}" class="btn btn-danger">Youtube</a>
             </div>
-            <div class="col-md-1">
-            <i onclick="closeMealDetails()"class="fa-solid fa-x fa-2x text-light"></i></div>
+            <div class=" position-absolute top-0 end-0 ">
+            <i onclick="closeMealDetails()"class="fa-solid fa-x fa-2x text-light close-btn"></i></div>
     `;
     $('#rowData').addClass('d-none')
     $('#mealDetails').removeClass("d-none").html(box);

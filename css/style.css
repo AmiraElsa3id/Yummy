@@ -34,7 +34,12 @@ i{
     top: 100%;
     transition: .5s;
 }
-
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+}
 .meal:hover .meal-layer{
     top: 0;
 }
@@ -62,4 +67,16 @@ i{
     background-color: #0D0D0D;
     display: flex;
     height: 110vh;
+}
+.content{
+        width: 100%;
+        margin-left: auto;
+    
+}
+
+@media (max-width:768px) {
+    .content{
+        width: 80%;
+        margin-left: auto;
+    }
 }
