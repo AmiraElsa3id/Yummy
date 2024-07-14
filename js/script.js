@@ -73,28 +73,7 @@ $('.open-close-icon').click(function () {
 })
 
 
-// $(".links li").eq(0).animate({top:"0px"},300,function(){
-//     $(".links li").eq(1).animate({top:"0px"},300,function(){
-//         $(".links li").eq(2).animate({top:"0px"},300,function(){
-//             $(".links li").eq(3).animate({top:"0px"},300,function(){
-//                 $(".links li").eq(4).animate({top:"0px"},300);
-//             });
-//         });
-//     },);
-// })
-//    let navLeft= $('nav-tab').css("width");
-// $('.nav-tab').animate({left:`${navLeft}px`},300);
-// $(".nav-tap").animate({width:"0px"})
 
-// $(".openNav").click(function(){
-//     $("#leftMenu").animate({width:"250px"})
-//     $("#home-content").animate({marginLeft:"250px"})
-// }
-// )
-// $(".closebtn").click(function(){
-//     $("#leftMenu").animate({width:"0px"})
-//     $("#home-content").animate({marginLeft:"0px"})
-// })
 
 async function getMealById(id) {
     $('.inner-loading').fadeIn(300)
@@ -163,10 +142,13 @@ function closeMealDetails() {
     $('.mealDetailsContainer').addClass('d-none')
 }
 $('#search').click(function () {
+
     closeNav();
     closeMealDetails();
     $('#rowData').addClass('d-none');
     $('#searchContainer').removeClass('d-none');
+    $('#searchContainer .name-search').val("");
+    $('#searchContainer .letter-search').val("");
 })
 $('.name-search').keyup(async function () {
     let search = $(this).val().toLowerCase();
