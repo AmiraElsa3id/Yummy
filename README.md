@@ -23,7 +23,7 @@ Yummy is a responsive web app that lets users browse meals and view recipes usin
 
 Home / Browse view
 
-![Home view](assets/demo-1.png)
+![Home view](assets/icons/demo-1.png)
 
 (If you have additional screenshots, add them to the `assets/` folder and update this section.)
 
